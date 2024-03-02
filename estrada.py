@@ -4,7 +4,7 @@ poltronas = {}
 
 def reservar_poltrona():
     try:
-        escolha = input("Escolha o lugar desejado (ímpar para Janela (J), par para Corredor (C)): ").upper()
+        escolha = input("Escolha o lugar desejado (para Janela (J),para Corredor (C)): ").upper()
 
         try:
             if escolha == 'J':
@@ -29,20 +29,22 @@ def reservar_poltrona():
                 numero_poltrona = int(input("Escolha o Numero da poltrona que deseja sentar: "))
     
                 if escolha == "C":
-                    probabilidade = numero_poltrona % 2 == 1
-                    if probabilidade == 0:
+                    probabilidade = numero_poltrona % 2 == 0
+                    if probabilidade == 1:
                         mudar = input("deseja mudar para poltronas na janela? (S/N): ").upper()
                         if mudar == 'S':
                             return
-                    
+                    else:
+                        pass
                     
                 elif escolha == "J":
-                    probabilidade = numero_poltrona % 2 == 0
-                    if probabilidade == 1:
+                    probabilidade = numero_poltrona % 2 == 1
+                    if probabilidade == 0:
                         mudar = input("deseja mudar para poltronas na corredor? (S/N): ").upper()
                         if mudar == 'S':
                             return
-                    
+                    else:
+                        pass
                 
                 if numero_poltrona < 1 or numero_poltrona > 50:
                     print("Assento inválido. Por favor, escolha um número entre 1 e 50.")
