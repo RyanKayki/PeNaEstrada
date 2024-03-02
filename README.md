@@ -3,10 +3,10 @@
 # Pé na Estrada
  A empresa de turismo “Pé na Estrada” organiza excursões escolares, utilizando
 ônibus, para eventos, parques, zoológicos, etc.
-E você terá a função nessa empresa de organizar um sistema de vendas, de uma
+ E você terá a função nessa empresa de organizar um sistema de vendas, de uma
 excursão de ônibus para o Zoo de São Paulo, que terá como cliente um
 determinado colégio da cidade.
-Quem irá usar o sistema será a coordenadora pedagógica, que
+ Quem irá usar o sistema será a coordenadora pedagógica, que
 reservará as poltronas do ônibus para os estudantes que
 efetuarem o pagamento.
 
@@ -37,7 +37,7 @@ O sistema terá as seguintes funcionalidades:
   - Mostrar poltronas Poltrona.
 
 
-  ## Instruções de Configuração
+## Instruções de Configuração
 
 
 Para configurar e executar o projeto em sua máquina local, siga estas etapas:
