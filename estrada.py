@@ -1,7 +1,9 @@
 import os
 
+#Dicionario
 poltronas = {}
 
+# 1 - Reservar
 def reservar_poltrona():
     try:
         escolha = input("Escolha o lugar desejado (para Janela (J),para Corredor (C)): ").upper()
@@ -31,7 +33,7 @@ def reservar_poltrona():
                 if escolha == "C":
                     probabilidade = numero_poltrona % 2 == 1
                     if probabilidade == 1:
-                        mudar = input("deseja mudar para poltronas na janela? (S/N): ").upper()
+                        mudar = input("deseja recomeçar para mudar sua poltrona para a janela? (S/N): ").upper()
                         if mudar == 'S':
                             return
                         else:
@@ -41,7 +43,7 @@ def reservar_poltrona():
                 elif escolha == "J":
                     probabilidade = numero_poltrona % 2 == 1
                     if probabilidade == 0:
-                        mudar = input("deseja mudar para poltronas na corredor? (S/N): ").upper()
+                        mudar = input("deseja recomeçar para mudar sua poltrona para o corredor? (S/N): ").upper()
                         if mudar == 'S':
                             return
                         else:
@@ -69,7 +71,7 @@ def reservar_poltrona():
     except ValueError:
         print("Escolha inválida para o tipo de assento.")
 
-
+# 2 - Desistencia
 def liberar_poltrona():
     try:
         numero_poltrona = int(input("Informe o número da poltrona a ser liberada: "))
@@ -81,6 +83,7 @@ def liberar_poltrona():
     except ValueError:
         print("Número de poltrona inválido.")
 
+# 3 - Mostrar
 def mostrar_poltronas():
     print("Estado das poltronas:")
     print("Janelas: \t\tCorredor:")
@@ -92,6 +95,7 @@ def mostrar_poltronas():
         if i % 2 == 0:
             print()
 
+# 4 - Privacidade
 def privacidade_poltronas():
     print("Estado das poltronas:")
     print("Janelas: \t\tCorredor:")  
