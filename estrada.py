@@ -6,7 +6,7 @@ poltronas = {}
 # 1 - Reservar
 def reservar_poltrona():
     try:
-        escolha = input("Escolha o lugar desejado (para Janela (J),para Corredor (C)): ").upper()
+        escolha = input("Escolha o lugar desejado (para Janela (J),para Corredor (C).): ").upper()
 
         try:
             if escolha == 'J':
@@ -125,10 +125,14 @@ def privacidade_poltronas():
     print(f"Poltrona {assento_escolhido}: {estado_assento}\tPoltrona {lado}: {estado_lado}")
     resposta = input(f"Deseja comprar a Poltrona {lado}? (S/N): ").upper()
     if resposta == 'S':
-        nome_passageiro = input("Informe o seu nome: ")
-        poltronas[assento_escolhido] = poltronas[lado] = nome_passageiro
-        print(f"Poltrona {lado} também foi reservada para {nome_passageiro}.")
-
+        if lado not in poltronas:
+            estado_lado = "livre"
+            nome_passageiro = input("Informe o nome da pessoa que vai ocupar o assento: ")
+            poltronas[assento_escolhido] = poltronas[lado] = nome_passageiro
+            print(f"Poltrona {lado} também foi reservada para {nome_passageiro}.")
+        else:
+            estado_lado = poltronas[lado]
+            print("A poltrona ao lado já esta sendo ocupada por uma pessoa!")
 
 # Menu principal
 while True:
